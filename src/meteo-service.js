@@ -13,6 +13,31 @@ export class MeteoService {
 
     transformData(data){
 
+        console.log("dati dal l'api",data);
+
+        const hourlyData = data.hourly;
+
+        console.log("solo i dati orari",hourlyData);
+
+        const times = hourlyData.time;
+
+        console.log('orari', times);
+
+        const temperaures = hourlyData.temperature_2m;
+
+        console.log('temp', temperaures);
+
+        const rains = hourlyData.rain;
+
+        console.log('rain', rains);
+
+        const codes = hourlyData.weather_code;
+
+        console.log('codes', codes);
+
+        const winds = hourlyData.wind_speed_10m;
+
+        console.log('winds', winds);
 
 
         //[{time:"2026-01-17T14:00", temperaure: 14, rain: 3, code: 0, wind: 12},
