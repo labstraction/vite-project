@@ -37,9 +37,10 @@ function displayMeteo(meteoData) {
         spanTemp.innerHTML = data.temperature;
         card.appendChild(spanTemp);
 
-        const spanCode = document.createElement('span');
-        spanCode.innerHTML = data.code;
-        card.appendChild(spanCode);
+        const imgCode = document.createElement('img');
+        imgCode.src = "/icons/" + data.code + "d.png";
+        imgCode.style.backgroundColor = "lightblue";
+        card.appendChild(imgCode);
 
         const spanWind = document.createElement('span');
         spanWind.innerHTML = data.wind;
