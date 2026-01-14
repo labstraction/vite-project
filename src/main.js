@@ -19,7 +19,6 @@ function displayMeteo(meteoData) {
     const container = document.getElementById('app');
     container.innerHTML = "";
 
-    console.log("meteo data", meteoData);
 
     for (const data of meteoData) {
 
@@ -51,7 +50,20 @@ function displayMeteo(meteoData) {
 }
 
 function getTemperaturePoints(meteoData) {
-    return [];
+    console.log("meteo data for temp", meteoData);
+
+    const points = [];
+
+    for (const data of meteoData) {
+        const point = {
+            x: data.time,
+            y: data.temperature
+        };
+        points.push(point);
+    }
+
+
+    return points;
 }
 
 function getRainPoints(meteoData) {
@@ -95,4 +107,3 @@ function testChart(canvasId, dataPoints) {
     new Chart(canvas, config)
 
 }
-
